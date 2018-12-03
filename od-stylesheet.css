@@ -1,0 +1,58 @@
+body {
+    max-height: 10000px;
+    max-width: 10000px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: black; }
+::-webkit-scrollbar-thumb { background: #CCCCCC; }
+::-webkit-scrollbar-thumb:hover { background: #CCCCCC; }
+
+.pageContainer {
+	width: 5781px;
+    height: 1000px;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+.oneSide{
+    background-color: grey;
+    width: 1925px;
+    height: 100%;
+    float: left;
+    margin: 0;
+    padding: 0px;
+}
+
+#leftBtn{
+    width: 10%;
+    height: 15%;
+    position:fixed;
+    top: 40%;
+    left: 0px;
+    display: block;
+    text-align: center;
+    font-size: 130px;
+    color: #FFF;
+    opacity: 0.4;
+    cursor: pointer;
+}
+#leftBtn:hover { opacity: 0.7; }
+
+#rightBtn{
+    width: 10%;
+    height: 15%;
+    position: fixed;
+    top: 40%;
+    right: 0px;
+    display: block;
+    text-align: center;
+    font-size: 130px;
+    color: #FFF;
+    opacity: 0.4;
+    cursor: pointer;
+}
+#rightBtn:hover { opacity: 0.7; }
+
