@@ -3,22 +3,27 @@ body {
     max-width: 10000px;
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: #d0ebee;
+    font-family: lato;
 }
+
+/* Scroll-bar */
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: black; }
 ::-webkit-scrollbar-thumb { background: #CCCCCC; }
 ::-webkit-scrollbar-thumb:hover { background: #CCCCCC; }
 
+/* Sideslider */
+
 .pageContainer {
-	width: 5781px;
+	width: 11550px;
     height: 1000px;
     margin-top: -8px;
     margin-left: -8px;
 }
 
 .oneSide{
-    background-color: grey;
     width: 1925px;
     height: 100%;
     float: left;
@@ -56,3 +61,108 @@ body {
 }
 #rightBtn:hover { opacity: 0.7; }
 
+/* First page content */
+
+#oneSideMain {
+	background-image:url(kroppensdaglogo.svg);
+    background-size: 1925px 1320px;
+    background-repeat: no-repeat;
+    background-position: -35px -100px;
+    display: flex;
+  	flex-direction: column;
+ 	justify-content: center;
+ 	vertical-align: middle;
+ 	animation: 
+ 		heartcolor 3s .50s ease-in 1 forwards;
+}
+
+@keyframes heartcolor {
+	from { 
+		background-image:url(kroppensdaglogo.svg); 
+	}
+	to { 
+		background-image:url(kroppensdaglogoopacity.svg); 
+	}
+	50% { 
+		background-image:url(kroppensdaglogogray.svg);
+	}
+}
+
+.typewriterBackground {
+	margin-left: 200px;
+	opacity: 0.9;
+	display: block;
+}
+
+/* The typing effect */
+@keyframes typing {
+  	from { width: 0; opacity: 1; }
+  	to { width: 100%; opacity: 1; }
+}
+
+/* The typewriter cursor effect */
+@keyframes type-blink {
+  	from, to { border-color: transparent }
+  	50% { border-color: #E9515A; }
+}
+
+h1 {
+	font-size: 100px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+	color: #000;
+	opacity: 0;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+  	border-right: .10em solid #E9515A; /* The typwriter cursor */ 
+  	white-space: nowrap;
+  	animation: 
+    	typing 1s 3s steps(13, end) forwards,
+    	type-blink .50s 3s step-end 1 normal;
+}
+
+h1:after {
+	opacity: 1;
+}
+
+h2 {
+	font-size: 60px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+	color: #000;
+	opacity: 0;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+  	border-right: .15em solid #E9515A; /* The typwriter cursor */
+  	white-space: nowrap;
+  	animation: 
+    	typing 3s 5s steps(35, end) forwards,
+    	type-blink .50s 5s step-end 1 normal;
+}
+
+h2:after {
+	opacity: 1;
+}
+
+/* Second page content */
+
+#oneSideSecond {
+	background-image:url('teacher.png');
+	background-position: -2px 30px;
+	background-repeat: no-repeat;
+}
+
+/* Third page content */
+
+#oneSideThird {
+	background-image: url('woman.png'), url('man.png');
+	background-size: 17% 60%, 17% 60%;
+	background-position: 650px 320px, 900px 320px;
+	background-repeat: no-repeat, no-repeat;
+}
+
+/* Sixth page content */
+
+#oneSideSix {
+	overflow-y: scroll;
+}
