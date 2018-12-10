@@ -1,0 +1,100 @@
+/* Typing effect */
+@keyframes typing {
+  	from { width: 0; opacity: 1; }
+  	to { width: 100%; opacity: 1; }
+}
+
+/* Typewriter cursor effect */
+@keyframes type-blink-red {
+  	from, to { border-color: transparent }
+  	50% { border-color: #E9515A; }
+}
+@keyframes type-blink-blue {
+    from, to { border-color: transparent }
+    50% { border-color: #139CAA; }
+}
+
+/* Text appearing effect */
+@keyframes textAppear {
+    from { opacity: 0; transform: scale(.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+/* From top to bottom effect */
+@keyframes imageAppear {
+    from { opacity: 0; transform: scale(.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+/* Front page animations */
+
+.animateh1 {
+    animation: 
+    	typing 1s 0s steps(13, end) forwards,
+    	type-blink-red .50s 0s step-end 1 normal;
+}
+.animateh2 {
+    animation: 
+    	typing 3s 1.50s steps(33, end) forwards,
+    	type-blink-red .50s 1.50s step-end 1 normal;
+}
+
+/* Second page animations */
+
+.animateh3-2 {
+    animation: 
+        typing 1.50s .50s steps(15, end) forwards,
+        type-blink-blue .50s 1.50s step-end 1 normal;
+}
+
+.animatep-2 { animation: textAppear 1.75s 2s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animatetable-2 { animation: textAppear 1.75s 3.75s cubic-bezier(.71,.55,.62,1.57) forwards; }
+
+/* Third page animations */
+
+.animatep-3-1 { animation: textAppear 1.25s 0s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animatep-3-2 { animation: textAppear 1.25s 1.25s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animatep-3-3 { animation: textAppear 1.25s 2.5s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animatep-3-4 { animation: textAppear 1.25s 3.75s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animatep-3-5 { animation: textAppear 1.25s 5s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animatep-3-6 { animation: textAppear 1.25s 6.25s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateqtb-1 { animation: textAppear 1.25s 7.5s cubic-bezier(.71,.55,.62,1.57) forwards; }
+
+/* Fourth page animations */ 
+
+.animateh3-4 { 
+    animation: 
+        typing 1.50s .50s steps(34, end) forwards,
+        type-blink-blue .50s 1.50s step-end 1 normal; }
+
+.animateInfluences-1 { animation: imageAppear 1s 2s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateInfluences-2 { animation: imageAppear 1s 3s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateInfluences-3 { animation: imageAppear 1s 4s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateInfluences-4 { animation: imageAppear 1s 5s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateInfluences-5 { animation: imageAppear 1s 6s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateInfluences-6 { animation: imageAppear 1s 7s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateInfluences-7 { animation: imageAppear 1s 8s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateInfluences-8 { animation: imageAppear 1s 9s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateSumUp { animation: textAppear 1s 10s cubic-bezier(.71,.55,.62,1.57) forwards; }
+
+/* Fifth page animations */
+
+.animateh3-5 { 
+    animation: 
+        typing 1.50s .50s steps(37, end) forwards,
+        type-blink-blue .50s 1.50s step-end 1 normal; }
+
+.animateImage-1 { animation: imageAppear 1s 2s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateImage-2 { animation: imageAppear 1s 3s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animateImage-3 { animation: imageAppear 1s 4s cubic-bezier(.71,.55,.62,1.57) forwards; }
+.animatefunfacts-5 { animation: imageAppear 1s 5s cubic-bezier(.71,.55,.62,1.57) forwards; }
+
