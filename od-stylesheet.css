@@ -515,6 +515,7 @@ h2:after {
     background-color: #46C4CC;
     width: 500px;
     padding: 20px;
+    vertical-align: text-top;
 }
 #about h3 {
     font-size: 34px;
