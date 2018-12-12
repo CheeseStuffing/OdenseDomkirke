@@ -3,55 +3,33 @@
 <head>
 	
 	<meta charset="utf-8"/>
+    <meta name="description" content="Odense Domkirke inviterer til dannelsesdag.Her kan du læse om eventet Kroppens Dag og hvordan det blev til.">
+    <meta name="keywords" content="kroppens dag, mangfoldighed, fællesskab, statistikker, ungdom, kropsbillede, odense domkirke, events">
+    <meta property="og:image" content="meta.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-    <script>
-        // Ind sæt dato, for den dag vi tæller ned til 
-        var countDownDate = new Date("Dec 10, 2018 10:00:00").getTime();
-        // opdateringer tæller ned hvert sekund
-        var x = setInterval(function() {
-        // Dagens dato og klokkeslæt 
-        var now = new Date().getTime();
-                
-        // Finder afstanden mellem nu og datoen vi tæller ned til 
-        var distance = countDownDate - now;
-                
-        // Tidsberengninger for dage timer, minutter og sekunder.
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-            // udføre resultatet i det element med id'et "countdown"
-            document.getElementById("count").innerHTML = days + "d " + hours + "t " + minutes + "m " ;
-            // + seconds + "s " er fjernet
-                
-            // Når nedtællingen er over, vil det stå denne tekst 
-            if (distance < 0 && < -25200) {
-                clearInterval(x);
-                document.getElementById("count").innerHTML = "EXPIRED";
-            }
-            /*else if (distance <= -25200) {
-                document.getElementById("count").innerHTML = "EXPIRED2";
-            }*/
-        }, );
-    </script>
     <script src="slidepresentation.js"></script>
     <link rel="stylesheet" type="text/css" href="animations.css">
 	<link rel="stylesheet" type="text/css" href="od-stylesheet.css">
 
 	<title>Kroppens Dag</title>
 
+    <script src="countdown.js"></script>
+    <script src="smoothscroll.js"></script>
+
 </head>
 
 <body>
 	<div id="leftBtn">
-        <img src="downarrow.gif" draggable=false>
+        <img src="images/downarrow.gif" draggable=false>
     </div>
     <div id="rightBtn">
-        <img src="downarrow.gif" draggable=false>
+        <img src="images/downarrow.gif" draggable=false>
     </div>
+
+    <main>
         <div class="pageContainer" id="pageCont">
             <div class="oneSide" id="oneSideMain"><p id="count"></p>
                 <div class="typewriterBackground" style="width: 640px; padding: 0px 0px 0px 12px;">
@@ -60,6 +38,7 @@
                 <div class="typewriterBackground" style="width: 750px; padding: 0px 0px 0px 15px;">
                 	<h2 id="h2Ani">En hyldest til mangfoldighed</h2>
                 </div>
+                <button onclick="startScroll(6)">Hello</button>
             </div>
 
             <div class="oneSide" id="oneSideSecond">
@@ -71,11 +50,11 @@
                     <table id="table-2Ani">
                         <tr id="tr-2Ani">
                             <td><section>En undersøgelse blandt undervisere, om problemet, viste at næsten alle var enige i, at elevernes syn på sig selv kan være en barriere for deres indlæring.</section></td>
-                            <td><img src="maninfo.png"></td>
+                            <td><img src="images/maninfo.png"></td>
                             <td><section>Omvendt var der bred enighed om, fra undervisernes perspektiv, at eleverne ikke var utilfredse med deres kroppe - eller at det i hvert fald ikke kom til udtryk - og at elevernes syn på sig selv ikke påvirkede deres hverdag.</section>
 
                             <section style="margin-top: 20px; font-style: italic;">Statistikkerne viser dog noget helt andet.</section></td>
-                            <td><img src="kvinde.png"></td>
+                            <td><img src="images/kvinde.png"></td>
                         </tr>
                     </table>                    
                 </div>
@@ -111,37 +90,37 @@
                         <table>
                             <tr>
                                 <td id="td1Ani">
-                                    <div class="circlingItems"><img src="love.png"></div>
+                                    <div class="circlingItems"><img src="images/love.png"></div>
                                     <p>Kæreste | <span class="percentage">6,3%</span></p>
                                 </td>
                                 <td id="td2Ani">
-                                    <div class="circlingItems"><img src="reklamer.png" style="position: relative; top: 30px;"></div>
+                                    <div class="circlingItems"><img src="images/reklamer.png" style="position: relative; top: 30px;"></div>
                                     <p>Reklamer | <span class="percentage">9,2%</span></p>
                                 </td>
                                 <td id="td3Ani">
-                                    <div class="circlingItems"><img src="filmtv.png"></div>
+                                    <div class="circlingItems"><img src="images/filmtv.png"></div>
                                     <p>Film/TV | <span class="percentage">13%</span></p>
                                 </td>
                                 <td id="td4Ani">
-                                    <div class="circlingItems"><img src="kendte.png"></div>
+                                    <div class="circlingItems"><img src="images/kendte.png"></div>
                                     <p>De kendte | <span class="percentage">16,5%</span></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td id="td5Ani">
-                                    <div class="circlingItems"><img src="parents.png" style="position: relative; top: 25px;"></div>
+                                    <div class="circlingItems"><img src="images/parents.png" style="position: relative; top: 25px;"></div>
                                     <p>Forældre | <span class="percentage">16,7%</span></p>
                                 </td>
                                 <td id="td6Ani">
-                                    <div class="circlingItems"><img src="venner.png"></div>
+                                    <div class="circlingItems"><img src="images/venner.png"></div>
                                     <p>Venner | <span class="percentage">36,3%</span></p>
                                 </td>
                                 <td id="td7Ani">
-                                    <div class="circlingItems"><img src="some.png"></div>
+                                    <div class="circlingItems"><img src="images/some.png"></div>
                                     <p>Sociale medier | <span class="percentage">44%</span></p>
                                 </td>
                                 <td id="td8Ani">
-                                    <div class="circlingItems"><img src="hoved.png"></div>
+                                    <div class="circlingItems"><img src="images/hoved.png"></div>
                                     <p>Dem selv | <span class="percentage">81,8%</span></p>
                                 </td>
                             </tr>
@@ -155,10 +134,10 @@
             </div>
             <div class="oneSide" id="oneSideFive">
 
-                <img src="sanger.png" id="imageThreeAni" style="position: absolute; top: 320px; right: 40px;">
-                <img src="danser.png" id="imageOneAni" style="position: absolute; top: 120px; left: 140px;">
+                <img src="images/sanger.png" id="imageThreeAni" style="position: absolute; top: 320px; right: 40px;">
+                <img src="images/danser.png" id="imageOneAni" style="position: absolute; top: 120px; left: 140px;">
 
-                <img src="atlet.png" id="imageTwoAni" style="position: absolute; top: 450px; left: 180px;">
+                <img src="images/atlet.png" id="imageTwoAni" style="position: absolute; top: 450px; left: 180px;">
 
                 <div id="funfactsWrap">
                     <div style="width: 790px;">
@@ -167,35 +146,35 @@
 
                         <div id="funfactsAni">
                         <div class="funfactsSquares" style="width: 350px; height: 190px; left: 450px; top: 550px;">
-                            <img src="hjerne.png">
+                            <img src="images/hjerne.png">
                                 <div class="textAreaSquares" style="width: 180px; margin-top: 10px;">
                                     <p>Et enkelt menneskes hjerne genererer flere elektriske impulser på én dag, end hele verdens telefoner kombineret. </p>
                                     <p style="font-size: 11px;">Kilde: <a href="https://brightside.me/article/100-quick-and-fascinating-facts-about-the-human-body-38305/">Brightside - 100 quick and fascinating facts about the human body</a></p>
                                 </div>
                         </div>
                         <div class="funfactsSquares" style="width: 300px; height: 210px; left: 450px;">
-                            <img src="teeth.png" style="height: 160px; margin-top: 40px;">
+                            <img src="images/teeth.png" style="height: 160px; margin-top: 40px;">
                             <div class="textAreaSquares" style="width: 150px; margin-top: 35px;">
                                     <p>Tænderne er den eneste del af kroppen, som ikke kan hele sig selv.</p>
                                     <p style="font-size: 11px;">Kilde: <a href="https://brightside.me/article/100-quick-and-fascinating-facts-about-the-human-body-38305/">Brightside - 100 quick and fascinating facts about the human body</a></p>
                                 </div>
                         </div>
                         <div class="funfactsSquares" style="width: 290px; height: 230px; left: 800px;">
-                            <img src="tastebuds.png" style="height: 200px; margin-top: 30px;">
+                            <img src="images/tastebuds.png" style="height: 200px; margin-top: 30px;">
                             <div class="textAreaSquares" style="width: 120px; margin-top: 35px;">
                                     <p>Vi har alle sammen ca. 2000 smagsløg.</p>
                                     <p style="font-size: 11px;">Kilde: <a href="https://brightside.me/article/100-quick-and-fascinating-facts-about-the-human-body-38305/">Brightside - 100 quick and fascinating facts about the human body</a></p>
                                 </div>
                         </div>
                         <div class="funfactsSquares" style="width: 330px; height: 150px; right: 370px; top: 310px;">
-                            <img src="syn.png" style="height: 100px; margin-top: 40px;">
+                            <img src="images/syn.png" style="height: 100px; margin-top: 40px;">
                             <div class="textAreaSquares" style="width: 155px; margin-top: 15px;">
                                     <p>Det menneskelige øje kan skelne mellem 10 mio. forskellige farver </p>
                                     <p style="font-size: 11px;">Kilde: <a href="https://brightside.me/article/100-quick-and-fascinating-facts-about-the-human-body-38305/">Brightside - 100 quick and fascinating facts about the human body</a></p>
                                 </div>
                         </div>
                         <div class="funfactsSquares" style="width: 260px; height: 180px; left: 450px; top: 280px;">
-                            <img src="nosears.png" style="height: 150px; margin-top: 30px;">
+                            <img src="images/nosears.png" style="height: 150px; margin-top: 30px;">
                             <div class="textAreaSquares" style="width: 105px; margin-top: 30px;">
                                     <p>Næser og ører vokser hele livet igennem.</p>
                                     <p style="font-size: 11px;">Kilde: <a href="https://www.123fakta.com/da/sjove-fakta-om-menneskekroppen">123fakta - Sjove fakta om menneskekroppen</a></p>
@@ -209,12 +188,13 @@
                     </div>
                 </div>
                 <div class="oneSide" id="oneSideSix">
-                    <img id="logo" src="kroppensdaglogo.svg">
+                    <div id="headContainer">
+                    <img id="logo" src="images/kroppensdaglogo.svg" onclick="startScroll(1)">
                     <nav id="fixed">
                         <p style="font-size: 14px;">Find os online:</p>
-                        <li><a class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="facebook.png" style="width: 80%"></a></li>
-                        <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="insta.png" style="width: 80%; margin-bottom: 10px;"></a></li>
-                        <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="snap.png" style="width: 60%;"></a></li>
+                        <li><a class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="images/facebook.png" style="width: 80%"></a></li>
+                        <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="images/insta.png" style="width: 80%; margin-bottom: 10px;"></a></li>
+                        <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="images/snap.png" style="width: 60%;"></a></li>
                     </nav>
 
                     <div id="headSideSix">
@@ -281,7 +261,8 @@
                     </div>
 
                     <p style="color: #48C5CC;">Om Odense Domkirke og Studenterhuset Odense</p>
-                    <div id="downArrow"><img src="downarrow.gif"></div>
+                    <div id="downArrow" onclick="smoothScroll6(document.getElementById('about'))"><img src="images/downarrow.gif"></div>
+                    </div>
 
                     <div id="about">
                         <table>
@@ -339,7 +320,7 @@
                                 <div class="formInfo">
                                     <span>Tilmeld senest d. 15. marts 2019 - OBS: Kun ved grupper på 10+</span>
                                 </div>
-                                <input class="submit" value="Tilmeld" type="submit" onclick="alert('Denne funktion er midlertidigt deaktiveret')">
+                                <input class="submit" value="Tilmeld" type="button" onclick="alert('Denne funktion er midlertidigt deaktiveret')">
                             </div>
                         </form>
                     </div>
@@ -350,22 +331,22 @@
 
                     <div class="mySlides fade">
                       <div class="numbertext">1 / 4</div>
-                      <img src="logothumb.jpg" style="width:100%">
+                      <img src="images/logothumb.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
                       <div class="numbertext">2 / 4</div>
-                      <img src="plakatthumb.jpg" style="width:100%">
+                      <img src="images/plakatthumb.png" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
                       <div class="numbertext">3 / 4</div>
-                      <img src="brochurethumb.jpg" style="width:100%">
+                      <img src="images/brochurethumb.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
                       <div class="numbertext">4 / 4</div>
-                      <img src="infografikthumb.jpg" style="width:100%">
+                      <img src="images/infografikthumb.jpg" style="width:100%">
                     </div>
 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -381,36 +362,33 @@
                       <span class="dot" onclick="currentSlide(4)"></span>
                     </div>
 
-                    <script>
-                    var slideIndex = 1;
-                    showSlides(slideIndex);
-                    function plusSlides(n) {
-                      showSlides(slideIndex += n);
-                    }
-                    function currentSlide(n) {
-                      showSlides(slideIndex = n);
-                    }
-                    function showSlides(n) {
-                      var i;
-                      var slides = document.getElementsByClassName("mySlides");
-                      var dots = document.getElementsByClassName("dot");
-                      if (n > slides.length) {slideIndex = 1}
-                      if (n < 1) {slideIndex = slides.length}
-                      for (i = 0; i < slides.length; i++) {
-                          slides[i].style.display = "none";
-                      }
-                      for (i = 0; i < dots.length; i++) {
-                          dots[i].className = dots[i].className.replace(" active", "");
-                      }
-                      slides[slideIndex-1].style.display = "block";
-                      dots[slideIndex-1].className += " active";
-                    }
-                    </script>
+                    <script src="toolslider.js"></script>
 
                     <div id="findus">
                         <h3>Find os her</h3>
                     </div>
+
+                    <footer>
+                    <div class="footer">
+                        <div class="fontfooter">
+                            <h4>Kontakt os</h4>
+                            <p> Mobil: 12 34 56 78</p>
+                            <p> Mail: kroppensdag@odensedomkirke.dk</p>
+                        </div>
+
+                        <div class="fontfooter">
+                            <p id="copyrightSpan">Copyright &copy; 2019 Kroppensdag, Odense Domkirke &#8226; Alle rettigheder forbeholdes.</p> 
+                        </div>
+
+                        <div class="fontfooter">
+                            <h4>GRATIS EVENT</h4>
+                            <p>Ved Odense Domkirke</p>
+                        </div>
+                    </div>
+                    </footer>
+
                 </div>
             </div>
+        </main>
 </body>
 </html>
