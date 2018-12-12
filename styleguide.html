@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+	<meta charset="utf-8"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<title>Style guide - Kroppens Dag</title>
+
+	<style>
+		body { 
+			background-color: #F4F5F8;
+			position: relative;
+			font-family: lato;
+		}
+
+		.style-box {
+			position: relative;
+			width: 1000px;
+			height: auto;
+			margin: 0px auto;
+			margin-top: 50px;
+		}
+
+		.menu {
+			width: 150px;
+			height: 40px;
+			display: block;
+			position: relative;
+			padding: 0px;
+			margin-bottom: 20px;
+			border-radius: 10% 0% 0% 10%;
+			background-color: #ECEEF3;
+		}
+
+		.menu label {
+			width: 100px;
+			height: 40px;
+			color: #AEADAC;
+		}
+
+		label {
+			display: block;
+			padding: 10px 0px 10px 10px;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.menu [type=radio] { display: none; }
+
+		.content-box {
+			position: absolute;
+			top: 0px;
+			left: 150px;
+			width: 800px;
+			height: 3750px;
+			padding: 20% 10% 0px 10%;
+			color: #5D5B59;
+			background-color: #ECEEF3;
+			font-size: 18px;
+			text-align: justify;
+		}
+
+		p {
+			width: 50%;
+			padding: 0% 10% 5% 10%;
+			line-height: 30px;
+			margin: 0 auto;
+		}
+
+		.content-box #page1 { overflow-x:hidden; overflow-y:hidden;  }
+		#page1 p { border-bottom: 1px solid lightgrey; }
+		h1 { 
+			text-align: center;
+			margin: 0;
+			padding-bottom: 20px;
+		}
+		#page2 { margin-top: -60px;  }
+		h2 {
+			text-align: center;
+			margin: 0;
+		}
+		h3 {
+			text-align: left;
+			margin: 0;
+			padding: 5% 5% 5% 5%;
+		}
+		h4 { 
+			text-align: left;
+			margin: 0;
+			padding: 5% 5% 5% 5%;
+		}
+		h5 {
+			text-align: left;
+			margin: 0;
+			padding: 1% 5% 1% 5%;
+		}
+		#page2 p {
+			width: 75%;
+			padding: 3% 5% 0% 10%;
+			font-size: 11px;
+			line-height: 14px;
+			border-top: 4px solid #F4F5F8;
+		}
+		#page2 img { margin-left: auto; margin-right: auto; display: block; }
+		#color1 { width: 45px; height: 45px; border-radius: 50%; background-color: #92C36C; }
+		#color2 { width: 45px; height: 45px; border-radius: 50%; background-color: #169DAB; }
+		#color3 { width: 45px; height: 45px; border-radius: 50%; background-color: #2695D3; }
+		#color4 { width: 45px; height: 45px; border-radius: 50%; background-color: #4D81C2; }
+		#color5 { width: 45px; height: 45px; border-radius: 50%; background-color: #EA5159; }
+		#color6 { width: 45px; height: 45px; border-radius: 50%; background-color: #F49958; }
+		#color7 { width: 45px; height: 45px; border-radius: 50%; background-color: #FFE180; }
+		#color8 { width: 45px; height: 45px; border-radius: 50%; background-color: #D0EBEE; }
+		table { margin: 0 auto; }
+		td { font-size: 11px; width: 45px;}
+		#typography { width: 480px; padding: 20px; margin: 0 auto; border-radius: 10% 10% 0% 0%; background-color: #F4F5F8;}
+		#typography p { margin: 0; padding: 0; line-height: 50px;}
+		#headline { font-size: 30px; font-weight: bold; color: #000; }
+		#subheadline { font-size: 22px; font-weight: bold; color: #000; }
+		#bodytext { font-size: 18px; font-weight: normal; color: #000; }
+		textarea { margin-left: auto; margin-right: auto; display: block; }
+		#page3 { margin-top: -120px; }
+
+		[type=radio]:checked ~ label { color: #5D5B59; background-color: none; z-index: 2; }
+		[type=radio]:checked ~ label ~ .content-box { z-index: 1; }
+	</style>
+
+</head>
+
+<body>
+	<div class="style-box">
+		<div class="menu">
+		<input type="radio" id="menu-1" name="menu-group" checked>
+		<label for="menu-1">Intro</label>
+
+		<div class="content-box" id="page1">
+			<h1>Introduktion</h1> 
+			<p>En style guide indeholder et sæt standarder af styling for at forsikre konsistent design og identitet. Dette er et overblik over styleguiden, der bliver brugt til at portrættere visuelle elementer, for kampagnesiden Kroppens Dag, hvis afsender er Odense Domkirke.</p>
+		</div>
+		</div>
+
+		<div class="menu">
+		<input type="radio" id="menu-2" name="menu-group">
+		<label for="menu-2">Styling</label>
+
+		<div class="content-box" id="page2">
+			<h2>Styling</h2>
+
+			<h3>Farver</h3>
+				<table cellspacing="15px">
+					<tbody>
+						<td id="color1"></td>
+						<td id="color2"></td>
+						<td id="color3"></td>
+						<td id="color8"></td>
+						<td id="color4"></td>
+						<td id="color5"></td>
+						<td id="color6"></td>
+						<td id="color7"></td>
+					</tbody>
+					<tbody>
+						<td>#92C36C</td>
+						<td>#169DAB</td>
+						<td>#2695D3</td>
+						<td>#D0EBEE</td>
+						<td>#4D81C2</td>
+						<td>#EA5159</td>
+						<td>#F49958</td>
+						<td>#FFE180</td>
+					</tbody>
+				</table>
+				<p>Ovenstående farver benyttes på både kodebaseret og grafiske multimedieløsninger, samt i projektets visuelle identitet.</p>
+			<h3>Typografi</h3>
+			<div id="typography">
+				<h3 id="headline">Headline, 'Lato'</h3>
+				<h3 id="subheadline">Subheadline, 'Lato'</h3>
+				<h3 id="bodytext">Bodytext, 'Lato'</h3>
+			</div>
+			<p>Skrifttypen 'Lato' bruges til både headline, subheadline og bodytext.</p>
+
+			<h4>Eksempler:</h4>
+
+			<h5>Headline</h5>
+			<img src="typoexample1.png">
+			<h5>Subheadline</h5>
+			<img src="typoexample2.png">
+			<h5>Bodytext</h5>
+			<img src="typoexample3.png">
+
+			<h3>UI elementer</h3>
+
+			<img src="arrows.png">
+			<h4>Pile som navigation</h4>
+
+			<h5>Javascript</h5>
+			<textarea rows="10" cols="100">
+document.getElementById("leftBtn").onclick = scrollLeft;
+document.getElementById("rightBtn").onclick = scrollRight;
+
+function scrollRight() {
+	if (rightScroll == false && leftScroll == false && pageIndex < pageStarts.length - 1) {
+		rightScroll = true;
+		window.scrollTo(pageStarts[pageIndex], 0);
+		pageIndex++;
+		startScroll(1);
+		}
+}
+
+function scrollLeft() {
+	if (rightScroll == false && leftScroll == false && pageIndex > 0) {
+		leftScroll = true;
+		window.scrollTo(pageStarts[pageIndex], 0);
+		pageIndex = pageIndex -1;
+		startScroll(-1);
+	}
+}
+			</textarea>
+			<h5>HTML/CSS</h5>
+			<textarea rows="10" cols="100">
+#leftBtn{
+    width: 10%;
+    height: 15%;
+    position:fixed;
+    top: 40%;
+    left: 0px;
+    display: block;
+    text-align: center;
+    font-size: 130px;
+    color: #FFF;
+    opacity: 0.4;
+    cursor: pointer;
+    z-index: 2;
+}
+#leftBtn img { 
+    width: 150px; 
+    transform: rotate(90deg); 
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;}
+#leftBtn:hover { opacity: 0.7; }
+
+#rightBtn{
+    width: 10%;
+    height: 15%;
+    position: fixed;
+    top: 40%;
+    right: 0px;
+    display: block;
+    text-align: center;
+    font-size: 130px;
+    color: #FFF;
+    opacity: 0.4;
+    cursor: pointer;
+    z-index: 2;
+    user-select: 
+}
+#rightBtn img { 
+    width: 150px; 
+    transform: rotate(-90deg);
+    user-drag: none; 
+    user-select: none;}
+#rightBtn:hover { opacity: 0.7; }
+
+#leftBtn, #rightBtn {
+    -webkit-animation: blink 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 3s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 3s;
+    -o-animation-iteration-count: infinite;
+}
+
+<div id="leftBtn">
+    <img src="downarrow.gif" draggable=false>
+</div>
+<div id="rightBtn">
+    <img src="downarrow.gif" draggable=false>
+</div>
+			</textarea>
+			<p>Disse pile bruges som navigation for brugeren.</p>
+
+			<img src="sgnavbar.png" style="margin-top: 40px;">
+			<h4>Sociale medier</h4>
+
+			<h5>Javascript</h5>
+			<textarea rows="5" cols="100">
+function checkAni(){ [...]
+	if(pageIndex == pageStarts.length - 1){
+	    document.getElementById("fixed").setAttribute("style", "display:block;");
+	}
+	else {
+	    document.getElementById("fixed").setAttribute("style", "display:none;");
+	}		</textarea>
+			<p>[...] indikerer, at funktionen indeholder flere statements.</p>
+
+			<h5>HTML/CSS</h5>
+			<textarea rows="10" cols="100">
+nav {
+    padding: 60px 0px 0px 0px;
+    width: 8%;
+    background-color: #159DAB;
+    position: fixed;
+    right: 0px;
+    height: 50%;
+    text-align: center;
+    color: #FFF;
+    display: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    display: block;
+    color: #FFFFFF;
+}
+
+li a.active {
+    background-color: #doebee;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #159DAB;
+    color: white;
+}
+
+.fa {
+text-align: center; 
+}
+
+<nav id="fixed">
+    <p style="font-size: 14px;">Find os online:</p>
+    <li><a class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="facebook.png" style="width: 80%"></a></li>
+    <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="insta.png" style="width: 80%; margin-bottom: 10px;"></a></li>
+    <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="snap.png" style="width: 60%;"></a></li>
+</nav>
+			</textarea>
+			<p>Denne navigationsbar er kun synlig på 6. og sidste side, hvor den er fixed til højre hjørne af skærmen.</p>
+
+			<img src="contactform.png" style="width: 700px;margin-top: 40px;">
+			<h4>Kontaktform</h4>
+
+			<h5>HTML/CSS</h5>
+			<textarea rows="10" cols="100">
+#contactForm {
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+    height: 425px;
+    background-color: #FD3F54;
+}
+#contactForm h3 {
+    color: #FFF;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.form span {
+    color: #FFF;
+    font-size: 10px;
+    float: left;
+}
+
+.form {
+    height: 260px;
+    width: 900px;
+    padding: 20px;
+    background-color: #FD3F54;
+    font-family: lato;
+    margin: 0 auto;
+}
+.form .line{
+    width: 100%;
+    height: 30px;
+    float: left;
+    margin: 10px;
+}
+.line .image{
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: orange;
+}
+.line .input {
+    width: 850px;
+    height: 36px;
+    margin-top: 0px;
+    padding: 0px;
+}
+.input { font-family: lato; }
+.line .textarea {
+    width: 850px;
+    height: 56px;
+    margin-top: 0px;
+    padding: 0px;
+}
+.textarea { font-family: lato; }
+.form .formEnd{
+    width: 100%;
+    height: 60px;
+    float: right;
+    margin-top: 20px;
+}
+.formInfo div{
+    color: white;
+    font-size: 10px;
+}
+.formInfo {
+    float: left;
+    margin-left: 50px;
+    width: 50%;
+}
+.formEnd .submit {
+    float: right;
+    margin-left: 28px;
+    width: 190px;
+    height: 40px;
+    background-color: orange;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+}
+			</textarea>
+
+			<!--<textarea rows="10" cols="100">
+<div id="contactForm">
+    <h3>Tilmelding til Kroppens Dag</h3>
+
+    <form class="form" >
+    	<div class="line">
+            <image class="image" src="ikonperson.png"/>
+            <input class="input" placeholder="Navn..." name="navn" type="text"/>
+        </div>
+	    <div class="line">
+	        <image class="image" src="ikonemail.png"/>
+	        <input class="input" placeholder="Email..." name="email" type="email"/>
+	    </div>
+	    <div class="line">
+            <image class="image" src="ikontelefon.png"/>
+            <input class="input" placeholder="Mobil..." name="mobil" type="number"/>
+        </div>
+        <div class="line">
+            <image class="image" src="ikonu.png"/>
+            <input class="input" placeholder="Uddannelsessted..." name="uddannelsessted" type="text"/>
+        </div>
+        <div class="line">
+            <image class="image" src="ikon10.png"/>
+            <input class="input" placeholder="Antal..." name="antal" type="number"/>
+        </div>
+        <div class="line">
+            <image class="image" src="ikonbrev.png"/>
+            <textarea rows="4" cols="50" class="textarea" placeholder="Evt spørgsmål..." name="evt"></textarea>
+        </div>
+        <div class="formEnd">
+            <div class="image" style="display: none;"></div>
+            <div class="formInfo">
+                <span>Tilmeld senest d. 15. marts 2019 - OBS: Kun ved grupper på 10+</span>
+            </div>
+            <input class="submit" value="Tilmeld" type="submit" onclick="alert('Denne funktion er midlertidigt deaktiveret')">
+        </div>
+	</form>
+</div></textarea>-->
+
+		<p>Kontaktformen bliver brugt på 6. og sidste side som CTA.</p>
+
+		</div>
+		</div>
+
+		<div class="menu">
+		<input type="radio" id="menu-3" name="menu-group">
+		<label for="menu-3">Billeder</label>
+
+		<div class="content-box" id="page3">
+			All stuff in hurrr 3
+		</div>
+		</div>	
+	</div>
+
+</body>
+</html>
