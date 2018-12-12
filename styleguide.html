@@ -100,6 +100,10 @@
 			line-height: 14px;
 			border-top: 4px solid #F4F5F8;
 		}
+		#page2 table {
+			border-spacing: 15px;
+    		border-collapse: separate;
+		}
 		#page2 img { margin-left: auto; margin-right: auto; display: block; }
 		#color1 { width: 45px; height: 45px; border-radius: 50%; background-color: #92C36C; }
 		#color2 { width: 45px; height: 45px; border-radius: 50%; background-color: #169DAB; }
@@ -119,7 +123,7 @@
 		textarea { margin-left: auto; margin-right: auto; display: block; }
 		#page3 { margin-top: -120px; }
 
-		[type=radio]:checked ~ label { color: #5D5B59; background-color: none; z-index: 2; }
+		[type=radio]:checked ~ label { color: #5D5B59; z-index: 2; }
 		[type=radio]:checked ~ label ~ .content-box { z-index: 1; }
 	</style>
 
@@ -145,26 +149,30 @@
 			<h2>Styling</h2>
 
 			<h3>Farver</h3>
-				<table cellspacing="15px">
+				<table>
 					<tbody>
-						<td id="color1"></td>
-						<td id="color2"></td>
-						<td id="color3"></td>
-						<td id="color8"></td>
-						<td id="color4"></td>
-						<td id="color5"></td>
-						<td id="color6"></td>
-						<td id="color7"></td>
+						<tr>
+							<td id="color1"></td>
+							<td id="color2"></td>
+							<td id="color3"></td>
+							<td id="color8"></td>
+							<td id="color4"></td>
+							<td id="color5"></td>
+							<td id="color6"></td>
+							<td id="color7"></td>
+						</tr>
 					</tbody>
 					<tbody>
-						<td>#92C36C</td>
-						<td>#169DAB</td>
-						<td>#2695D3</td>
-						<td>#D0EBEE</td>
-						<td>#4D81C2</td>
-						<td>#EA5159</td>
-						<td>#F49958</td>
-						<td>#FFE180</td>
+						<tr>
+							<td>#92C36C</td>
+							<td>#169DAB</td>
+							<td>#2695D3</td>
+							<td>#D0EBEE</td>
+							<td>#4D81C2</td>
+							<td>#EA5159</td>
+							<td>#F49958</td>
+							<td>#FFE180</td>
+						</tr>
 					</tbody>
 				</table>
 				<p>Ovenstående farver benyttes på både kodebaseret og grafiske multimedieløsninger, samt i projektets visuelle identitet.</p>
@@ -179,15 +187,15 @@
 			<h4>Eksempler:</h4>
 
 			<h5>Headline</h5>
-			<img src="typoexample1.png">
+			<img src="images/typoexample1.png" alt="Headline">
 			<h5>Subheadline</h5>
-			<img src="typoexample2.png">
+			<img src="images/typoexample2.png" alt="Subheadline">
 			<h5>Bodytext</h5>
-			<img src="typoexample3.png">
+			<img src="images/typoexample3.png" alt="Bodytext">
 
 			<h3>UI elementer</h3>
 
-			<img src="arrows.png">
+			<img src="images/arrows.png" alt="Navigationspile">
 			<h4>Pile som navigation</h4>
 
 			<h5>Javascript</h5>
@@ -272,15 +280,15 @@ function scrollLeft() {
 }
 
 <div id="leftBtn">
-    <img src="downarrow.gif" draggable=false>
+    <img src="images/downarrow.gif" alt="Venstre pil" draggable=false>
 </div>
 <div id="rightBtn">
-    <img src="downarrow.gif" draggable=false>
+    <img src="images/downarrow.gif" alt="Højre pil" draggable=false>
 </div>
 			</textarea>
 			<p>Disse pile bruges som navigation for brugeren.</p>
 
-			<img src="sgnavbar.png" style="margin-top: 40px;">
+			<img src="images/sgnavbar.png" alt="Sociale medier navigationsbar" style="margin-top: 40px;">
 			<h4>Sociale medier</h4>
 
 			<h5>Javascript</h5>
@@ -333,14 +341,14 @@ text-align: center;
 
 <nav id="fixed">
     <p style="font-size: 14px;">Find os online:</p>
-    <li><a class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="facebook.png" style="width: 80%"></a></li>
-    <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="insta.png" style="width: 80%; margin-bottom: 10px;"></a></li>
-    <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="snap.png" style="width: 60%;"></a></li>
+    <li><a class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="images/facebook.png" alt="Facebook" style="width: 80%"></a></li>
+    <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="images/insta.png" alt="Instagram" style="width: 80%; margin-bottom: 10px;"></a></li>
+    <li><a  class="fa" onclick="alert('Denne funktion er midlertidigt deaktiveret')"><img src="images/snap.png" alt="Snapchat" style="width: 60%;"></a></li>
 </nav>
 			</textarea>
 			<p>Denne navigationsbar er kun synlig på 6. og sidste side, hvor den er fixed til højre hjørne af skærmen.</p>
 
-			<img src="contactform.png" style="width: 700px;margin-top: 40px;">
+			<img src="images/contactform.png" alt="Kontaktform" style="width: 700px;margin-top: 40px;">
 			<h4>Kontaktform</h4>
 
 			<h5>HTML/CSS</h5>
