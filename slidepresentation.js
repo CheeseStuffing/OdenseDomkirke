@@ -40,22 +40,44 @@ function startUp() {
 function startScroll(mode) {
     var scrolled = 0;
     var finished = false;
-    checkButtons();
-    var smoothScroll = setInterval(function () {
-        if (scrolled >= (pageWidth-(scrollByPixels*3)) && finished != true) {
-            clearInterval(smoothScroll);
-            finished == true;
-            window.scrollTo(pageStarts[pageIndex], 0);
-            leftScroll = false;
-            rightScroll = false;
-            checkAni();
-            
+    if(mode == 6){
+        rightScroll = true;
+        var smoothScroll2 = setInterval(function () {
+            if ((scrolled >= ((pageWidth*(pageStarts.length-1))-(pageWidth*pageIndex))-(scrollByPixels*3)) && finished != true) {
+                clearInterval(smoothScroll2);
+                pageIndex = pageStarts.length - 1;
+                checkButtons();
+                finished == true;
+                window.scrollTo(pageStarts[pageIndex], 0);
+                leftScroll = false;
+                rightScroll = false;
+                checkAni();
 
-        } else {
-            window.scrollBy(scrollByPixels * mode, 0);
-            scrolled += scrollByPixels;
-        }
-    }, timePerScrollTick);
+
+            } else {
+                window.scrollBy(scrollByPixels * mode-pageIndex, 0);
+                scrolled += scrollByPixels * ((pageStarts.length-1)-pageIndex);
+            }
+        }, timePerScrollTick);
+    }
+    else{
+        checkButtons();
+        var smoothScroll = setInterval(function () {
+            if (scrolled >= (pageWidth-(scrollByPixels*3)) && finished != true) {
+                clearInterval(smoothScroll);
+                finished == true;
+                window.scrollTo(pageStarts[pageIndex], 0);
+                leftScroll = false;
+                rightScroll = false;
+                checkAni();
+
+
+            } else {
+                window.scrollBy(scrollByPixels * mode, 0);
+                scrolled += scrollByPixels;
+            }
+        }, timePerScrollTick);
+    }
 }
 
 function scrollRight() {
@@ -119,7 +141,6 @@ function checkAni(){
     }
     if(pageIndex == pageStarts.length - 1){
         document.getElementById("fixed").setAttribute("style", "display:block;");
-        setAnimation("navBarAni","animatenavbar");
     }
     else {
         document.getElementById("fixed").setAttribute("style", "display:none;");
