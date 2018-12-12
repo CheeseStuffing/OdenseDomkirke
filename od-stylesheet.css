@@ -50,12 +50,7 @@ a {
 #leftBtn img { 
     width: 150px; 
     transform: rotate(90deg); 
-    user-drag: none; 
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;}
+}
 #leftBtn:hover { opacity: 0.7; }
 
 #rightBtn{
@@ -71,13 +66,10 @@ a {
     opacity: 0.4;
     cursor: pointer;
     z-index: 2;
-    user-select: 
 }
 #rightBtn img { 
     width: 150px; 
-    transform: rotate(-90deg);
-    user-drag: none; 
-    user-select: none;}
+    transform: rotate(-90deg);}
 #rightBtn:hover { opacity: 0.7; }
 
 #leftBtn, #rightBtn {
@@ -687,7 +679,6 @@ h2:after {
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
 }
 
 /* Position the "next button" to the right */
@@ -770,6 +761,12 @@ nav {
     z-index: 5;
 }
 
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 li {
     list-style-type: none;
 }
@@ -780,12 +777,10 @@ li a {
 }
 
 li a.active {
-    background-color: #doebee;
     color: white;
 }
 
 li a:hover:not(.active) {
-    background-color: #159DAB;
     color: white;
 }
 
@@ -798,7 +793,7 @@ text-align: center;
 .footer {
     position: relative;
     bottom: 0;
-    top: 50;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
