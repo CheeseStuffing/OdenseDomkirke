@@ -35,11 +35,47 @@
   }
 }
 
+/* Left og Right Button blin */
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Front page animations */
 
 .animateh1 {
     animation: 
-    	typing 1s 0s steps(13, end) forwards,
+    	typing 1s 0.50s steps(13, end) forwards,
     	type-blink-red .50s 0s step-end 1 normal;
 }
 .animateh2 {
