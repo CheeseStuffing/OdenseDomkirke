@@ -1,5 +1,5 @@
 // Ind sæt dato, for den dag vi tæller ned til 
-    var countDownDate = new Date("Apr 23, 2019 10:00:00").getTime();
+    var countDownDate = new Date("Apr 15, 2019 10:00:00").getTime();
 // opdateringer tæller ned hvert sekund
     var x = setInterval(function() {
 // Dagens dato og klokkeslæt 
@@ -21,9 +21,6 @@
 // Når nedtællingen er over, vil det stå denne tekst 
     if (distance < 0 && distance < -25200) {
             clearInterval(x);
-            document.getElementById("count").innerHTML = "EXPIRED";
+            document.getElementById("count").innerHTML = "Kroppensdag er nu igang";
         }
-        /*else if (distance <= -25200) {
-                document.getElementById("count").innerHTML = "EXPIRED2";
-        }*/
     }, );
